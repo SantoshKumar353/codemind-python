@@ -8,5 +8,4 @@ def hcf_gcd(a,b):
             return max
         max-=1
 a,b=map(int,input().split())
-s=hcf_gcd(a,b)
-print(s)
+print(hcf_gcd(a,b))
