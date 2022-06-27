@@ -1,11 +1,9 @@
-t=int(input())
-fact=0
-x=1
-while x<=t//2:
-    if t%x==0:
-        fact+=x
-    x+=1
-if fact>t:
+n=int(input())
+c=0
+for i in range(1,(n//2)+1):
+    if n%i==0:
+        c+=i
+if c>n:
     print(True)
 else:
     print(False)
