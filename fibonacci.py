@@ -1,11 +1,10 @@
-def fibo(n):
-    a=0
-    b=1
-    print(a,b,end=' ')
-    for i in range (2,n):
-        sum=a+b
-        print(sum,end=' ')
-        a=b
-        b=sum
+def feb(n):
+ a,b=0,1
+ print(a,b,end=' ')
+ for i in range(2,n):
+     c=a+b
+     print(c,end=' ')
+     a=b
+     b=c
 n=int(input())
-fibo(n)
+feb(n)
