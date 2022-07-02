@@ -1,7 +1,7 @@
-n,k=map(int,input().split())
-m=list(map(int,input().split()))
+m,n=map(int,input().split())
+l=list(map(int,input().split()))
 c=0
-for i in m:
-    if len(str(abs(i)))==k:
+for i in l:
+    if len(str(abs(i)))==n:
         c+=1
 print(c)
