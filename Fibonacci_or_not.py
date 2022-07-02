@@ -1,13 +1,19 @@
+def fib(n):
+    a,b=0,1
+    if n==a or n==b:
+        print(True)
+    else:
+        c=a+b
+        a=b
+        b=c
+        while c<n:
+            c=a+b
+            a=b
+            b=c
+        if c==n:
+            print(True)
+        else:
+            print(False)
+
 n=int(input())
-a=0
-b=1
-c=0
-for i in range(2,n+1):
-    sum=a+b
-    b=a
-    a=sum
-    if(n==sum):
-        print("True")
-        c=1
-if(c==0):
-    print("False")
+fib(n)
