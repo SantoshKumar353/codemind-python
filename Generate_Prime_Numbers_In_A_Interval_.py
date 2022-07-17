@@ -1,12 +1,16 @@
-a = int(input())
-b = int(input())
-while a<=b:
-    c = 0
-    x = 1
-    while x<=a//2:
-        if a%x==0:
-            c+=1
-        x+=1
-    if c==1:
-        print(a)
-    a+=1
+def prime(n):
+    if n<2:
+        return False
+        
+    
+    for i in range(2,n):
+        if n%i==0:
+            return False
+            
+    return True
+    
+a=int(input())
+b=int(input())
+for i in range(a,b+1):
+    if prime(i):
+        print(i)
