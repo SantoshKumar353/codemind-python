@@ -1,28 +1,30 @@
-def pal(n):
-    temp=n
-    rev=0
-    while n>0:
-        rev=rev*10+n%10
-        n//=10
-    if rev==temp:
-        return True
-    else:
-        return False
-n=int(input())
-i=n+1
-j=n-1
-while not pal(i) and not pal(j):
-    i+=1
-    j-=1
-if pal(i) and pal(j):
-    if abs(i-n)==abs(n-i):
-        print(j,i)
-    else:
-        if abs(i-n)>abs(n-j):
-            print(j)
-        else:
-            print(i)
-elif pal(i):
-    print(i)
+def is_palin(j):
+    
+    m=j
+    s=0
+    while m!=0:
+        v=m%10
+        s=s*10+v
+        m=m//10
+    if j==s:
+        return j
+        
+x=int(input())
+for i in range(x-1,1,-1):
+    if is_palin(i):
+        a=i
+        break
+g=x+1
+while g!=0:
+    if is_palin(g):
+        b=g
+        break
+    g+=1
+if (x-a)<(b-x):
+    print(a)
+elif (x-a)==(b-x):
+    print(a,b)
 else:
-    print(j)
+    print(b)
+        
+        
